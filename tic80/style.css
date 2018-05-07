@@ -3,7 +3,8 @@ body{
   background-color: #6dc2ca;
 }
 
-.header, .operators{
+.container{
+  display: inline-block;
   max-width: 720px;
 }
 
