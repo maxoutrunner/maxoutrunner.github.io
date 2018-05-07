@@ -1,0 +1,34 @@
+body{
+  background-color: #6dc2ca;
+}
+.header{
+  margin-bottom: 1px;
+  text-align: center;
+}
+.title{
+  margin: 0;
+}
+.operators{
+  margin-top:1px;
+  margin-bottom: 1px;
+  list-style-type: none;
+  padding:3px;
+}
+.operator{
+  margin: 2px;
+}
+.opnamediv{
+  background-color: #8595a1;
+  border-radius: 2px 2px 0 0;
+}
+.opdescdiv{
+  background-color: #deeed6;
+  border-radius: 0 0 2px 2px;
+}
+.opdiv{
+  padding: 10px;
+}
+.opname{
+  font-weight: bold;
+
+}
