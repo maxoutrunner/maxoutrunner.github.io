@@ -1,9 +1,13 @@
 body{
   text-align: center;
   background-color: #6dc2ca;
-  min-width: 480px;
-  max-width: 720px;
 }
+
+.header, .operators{
+  max-width: 720px;
+  min-width: 360px;
+}
+
 .header{
   display: inline-block;
   margin-bottom: 1px;
