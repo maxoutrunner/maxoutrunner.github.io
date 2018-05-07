@@ -1,5 +1,7 @@
 body{
   background-color: #6dc2ca;
+  min-width: 480px;
+  max-width: 720px;
 }
 .header{
   margin-bottom: 1px;
