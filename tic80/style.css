@@ -17,6 +17,14 @@ body{
 .title{
   margin: 0;
 }
+.categories{
+  text-align: left;
+  display: center;
+  margin-top:1px;
+  margin-bottom: 1px;
+  list-style-type: none;
+  padding:1px;
+}
 .operators{
   text-align: left;
   display: inline-block;

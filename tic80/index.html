@@ -13,167 +13,195 @@
     <header class="header">
       <h1 class="title">TIC-80 CHEAT SHEET</h1>
     </header>
-    <ul class="operators">
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">TIC()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Called each frame at 60FPS</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">scanline(line)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Called on every line render.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">OVR()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Called on each frame. Draws on separate layer.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">btn(id)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Test if button ID was pressed.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">btnp(id[, hold, period])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">TRUE only in the moment when button ID is pressed and, after the HOLD time is elapsed the function return TRUE every time PERIOD is passed.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">Player 1 buttons</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Up: 0, Down: 1, Left: 2, Right: 3, A: 4, B: 5</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">Player 2 buttons</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Up: 8, Down: 9, Left: 10, Right: 11, A: 12, B: 13</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">clip(x, y, w, h)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Limits render area to size W, H, starting at X, Y.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">cls([color])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Fill screen with palette colour 0 or COLOR if specified.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">circ(x, y, r, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled with colour C circle with it's center at X, Y, it's radius R.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">circb(x, y, r, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a ring of 1px of colour C with it's center at X, Y, it's radius R.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">exit()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Interrupt program execution and return to the console</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">font(text, x, y, key, w, h, fixed, scale)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Prints TEXT at X, Y with custom font. KEY is transparency colour, W and H are character width and height used for spacing, fixed is a flag indicating wether to fix the width of the characters. </span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">key(code)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">True if key CODE on keyboard is pressed</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">keyp(code[, hold period])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">TRUE only in the moment when button CODE is pressed and, after the HOLD time is elapsed the function return TRUE every time PERIOD is passed.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">line(x0, y0, x1, y1, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a 1px line of colour C from x0, y0, to x1, y1.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">map(x, y, w, h, sx, sy, key, scale, remap)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a map segment from the mapspace, starting at tile X, Y, of width W and height H, starting at screen coordinates SX and SY, with KEY as transparent colour(-1 as none), at SCALE. Remap is a function that is called every tile render, expected to return the tile to be drawn instead of a current tile.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">memcpy(toaddr, fromaddr, len)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Copies RAM block of LEN bytes from FROMADDR to TOADDR.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">memset(addr, val, len)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Write a block of ram of LEN length at ADDR, with decimal value VAL.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">mget(x, y)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">returns the sprite id at the given X and Y map coordinate</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">mouse()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns X, Y, PRESSED: the current coordinates of the mouse and the mouse button state.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">mset(x, y, id)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Set map tile at X, Y, to the sprite ID></span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">music([track=-1][,frame=-1][,row=-1][,loop=true])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Plays music track TRACK at frame FRAME, row ROW, (not) to be LOOPed. music() will stop the music</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">peek(addr)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns a byte from ADDR in decimal format.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">peek4(addr)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns 4 bits from ADDR in decimal</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">pix(x, y, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Put a pixel of colour C at X, Y on the screen.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">pmem(index[, val])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Return or save VAL(if specified) at the cartridges' persistent memory cell INDEX, ranging from 0 to 255</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">poke(addr, val)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Write VAL to ram address ADDR</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">poke4(addr)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Write 4 bits of VAL to ram address ADDR</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">print(text [, x, y][, c][, fixed=false][, scale=1])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Print TEXT with system font at X, Y, of colour C, with FIXED character width, at SCALE. Returns text width.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">rect(x, y, w, h, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled rectangle of colour C, with the top left corner at X, Y, of width W and height H.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">rectb(x, y, w, h, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a 1px rectangle of colour C, with the top left corner at X, Y, of width W and height H.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">reset()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Reset cartridge execution.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">sfx(id [, note][, duration=-1][, channel=0][, volume=15][, speed=0])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Play the sound ID, -1 to stop. Or play a custom note.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">spr(id, x, y[, key=-1][, scale=1][, flip=0][, rotate=0][, w=1, h=1])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw sprite ID at screen X, Y, with transparet colour of KEY, at SCALE, being FLIPPED: 1-horisontally, 2-vertically, 3-both; ROTATEd: 1-90*, 2-180*, 3-270*. If it's a composite sprite, it's W sprites wide, H sprites high.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">sync(mask=0, bank=0, toCart=false)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Copy data from/to cart, set at TOCART, at memory bank BANK, with binary mask MASK. 0 to move all. Add 1 to move tiles, add 2 for sprites, 4 for map, 8 for sfx, 16 for music, 32 for palette. </span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">time()</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns number of seconds from the game start, in float.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">trace(msg[, c])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Print MSG to terminal at colour C.</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">tri(x1, y1, x2, y2, x3, y3, c)</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled triangle of colour C and the vertices at X1, Y1, X2...</span></div>
-      </li>
-      <li class="operator">
-        <div class="opdiv opnamediv"><span class="opname opspan">textri(x1, y1, x2, y2, x3, y3, u1, v1, u2, v2, u3, v3[, use_map=false][, key=-1])</span></div>
-        <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a triangle with vertices at X1, Y1, X2... , filled with texture.</span></div>
-      </li>
+    <ul class="categories">
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">TIC()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Called each frame at 60FPS</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">scanline(line)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Called on every line render.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">OVR()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Called on each frame. Draws on separate layer.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">clip(x, y, w, h)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Limits render area to size W, H, starting at X, Y.</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">cls([color])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Fill screen with palette colour 0 or COLOR if specified.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">print(text [, x, y][, c][, fixed=false][, scale=1])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Print TEXT with system font at X, Y, of colour C, with FIXED character width, at SCALE. Returns text width.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">font(text, x, y, key, w, h, fixed, scale)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Prints TEXT at X, Y with custom font. KEY is transparency colour, W and H are character width and height used for spacing, fixed is a flag indicating wether to fix the width of the characters. </span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">spr(id, x, y[, key=-1][, scale=1][, flip=0][, rotate=0][, w=1, h=1])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw sprite ID at screen X, Y, with transparet colour of KEY, at SCALE, being FLIPPED: 1-horisontally, 2-vertically, 3-both; ROTATEd: 1-90*, 2-180*, 3-270*. If it's a composite sprite, it's W sprites wide, H sprites high.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">pix(x, y, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Put a pixel of colour C at X, Y on the screen.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">line(x0, y0, x1, y1, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a 1px line of colour C from x0, y0, to x1, y1.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">circ(x, y, r, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled with colour C circle with it's center at X, Y, it's radius R.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">circb(x, y, r, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a ring of 1px of colour C with it's center at X, Y, it's radius R.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">rect(x, y, w, h, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled rectangle of colour C, with the top left corner at X, Y, of width W and height H.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">rectb(x, y, w, h, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a 1px rectangle of colour C, with the top left corner at X, Y, of width W and height H.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">tri(x1, y1, x2, y2, x3, y3, c)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a filled triangle of colour C and the vertices at X1, Y1, X2...</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">textri(x1, y1, x2, y2, x3, y3, u1, v1, u2, v2, u3, v3[, use_map=false][, key=-1])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a triangle with vertices at X1, Y1, X2... , filled with texture.</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">map(x, y, w, h, sx, sy, key, scale, remap)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a map segment from the mapspace, starting at tile X, Y, of width W and height H, starting at screen coordinates SX and SY, with KEY as transparent colour(-1 as none), at SCALE. Remap is a function that is called every tile render, expected to return the tile to be drawn instead of a current tile.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">mset(x, y, id)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Set map tile at X, Y, to the sprite ID></span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">mget(x, y)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">returns the sprite id at the given X and Y map coordinate</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">Player 1 buttons</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Up: 0, Down: 1, Left: 2, Right: 3, A: 4, B: 5</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">Player 2 buttons</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Up: 8, Down: 9, Left: 10, Right: 11, A: 12, B: 13</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">btn(id)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Test if button ID was pressed.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">btnp(id[, hold, period])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">TRUE only in the moment when button ID is pressed and, after the HOLD time is elapsed the function return TRUE every time PERIOD is passed.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">key(code)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">True if key CODE on keyboard is pressed</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">keyp(code[, hold period])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">TRUE only in the moment when button CODE is pressed and, after the HOLD time is elapsed the function return TRUE every time PERIOD is passed.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">mouse()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns X, Y, PRESSED: the current coordinates of the mouse and the mouse button state.</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">music([track=-1][,frame=-1][,row=-1][,loop=true])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Plays music track TRACK at frame FRAME, row ROW, (not) to be LOOPed. music() will stop the music</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">sfx(id [, note][, duration=-1][, channel=0][, volume=15][, speed=0])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Play the sound ID, -1 to stop. Or play a custom note.</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">memcpy(toaddr, fromaddr, len)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Copies RAM block of LEN bytes from FROMADDR to TOADDR.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">memset(addr, val, len)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Write a block of ram of LEN length at ADDR, with decimal value VAL.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">peek(addr)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns a byte from ADDR in decimal format.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">peek4(addr)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns 4 bits from ADDR in decimal</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">poke(addr, val)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Write VAL to ram address ADDR</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">poke4(addr)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Write 4 bits of VAL to ram address ADDR</span></div>
+         </li>
+       </ul>
+     </li>
+     <li class="category">
+       <ul class="operators">
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">exit()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Interrupt program execution and return to the console</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">reset()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Reset cartridge execution.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">trace(msg[, c])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Print MSG to terminal at colour C.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">time()</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Returns number of seconds from the game start, in float.</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">pmem(index[, val])</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Return or save VAL(if specified) at the cartridges' persistent memory cell INDEX, ranging from 0 to 255</span></div>
+         </li>
+         <li class="operator">
+           <div class="opdiv opnamediv"><span class="opname opspan">sync(mask=0, bank=0, toCart=false)</span></div>
+           <div class="opdiv opdescdiv"><span class="opdesc opspan">Copy data from/to cart, set at TOCART, at memory bank BANK, with binary mask MASK. 0 to move all. Add 1 to move tiles, add 2 for sprites, 4 for map, 8 for sfx, 16 for music, 32 for palette. </span></div>
+         </li>
+       </ul>
+     </li>
     </ul>
   </div>
 </body>
