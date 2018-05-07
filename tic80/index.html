@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- v. 0.12 -->
+<!-- v. 0.13 -->
 <html lang="en">
 <head>
   <link rel="stylesheet" href="style.css">
@@ -37,6 +37,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">Drawing</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">cls([color])</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Fill screen with palette colour 0 or COLOR if specified.</span></div>
@@ -89,6 +90,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">Map</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">map(x, y, w, h, sx, sy, key, scale, remap)</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Draw a map segment from the mapspace, starting at tile X, Y, of width W and height H, starting at screen coordinates SX and SY, with KEY as transparent colour(-1 as none), at SCALE. Remap is a function that is called every tile render, expected to return the tile to be drawn instead of a current tile.</span></div>
@@ -105,6 +107,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">Controls</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">Player 1 buttons</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Up: 0, Down: 1, Left: 2, Right: 3, A: 4, B: 5</span></div>
@@ -137,6 +140,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">Sound</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">music([track=-1][,frame=-1][,row=-1][,loop=true])</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Plays music track TRACK at frame FRAME, row ROW, (not) to be LOOPed. music() will stop the music</span></div>
@@ -149,6 +153,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">RAM</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">memcpy(toaddr, fromaddr, len)</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Copies RAM block of LEN bytes from FROMADDR to TOADDR.</span></div>
@@ -177,6 +182,7 @@
      </li>
      <li class="category">
        <ul class="operators">
+         <li class="opheader"><span class="opheaderspan">System</span></li>
          <li class="operator">
            <div class="opdiv opnamediv"><span class="opname opspan">exit()</span></div>
            <div class="opdiv opdescdiv"><span class="opdesc opspan">Interrupt program execution and return to the console</span></div>
