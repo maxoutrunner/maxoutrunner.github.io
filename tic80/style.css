@@ -9,6 +9,7 @@ body{
 }
 
 .header{
+  font-family: "Joystix", serif;
   display: inline-block;
   margin-bottom: 1px;
   text-align: center;
@@ -38,7 +39,15 @@ body{
 .opdiv{
   padding: 10px;
 }
+@font-face {
+  font-family: "Kongtext";
+  src: url(kongtext.ttf)
+}
+@font-face {
+  font-family: "Joystix";
+  src: url(joystix.ttf)
+}
 .opname{
   font-weight: bold;
-
+  font-family: "Joystix", sans-serif;
 }
