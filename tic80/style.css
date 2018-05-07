@@ -5,7 +5,6 @@ body{
 
 .header, .operators{
   max-width: 720px;
-  min-width: 360px;
 }
 
 .header{
