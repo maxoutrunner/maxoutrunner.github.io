@@ -1,9 +1,11 @@
 body{
+  text-align: center;
   background-color: #6dc2ca;
   min-width: 480px;
   max-width: 720px;
 }
 .header{
+  display: inline-block;
   margin-bottom: 1px;
   text-align: center;
 }
@@ -11,6 +13,8 @@ body{
   margin: 0;
 }
 .operators{
+  text-align: left;
+  display: inline-block;
   margin-top:1px;
   margin-bottom: 1px;
   list-style-type: none;
