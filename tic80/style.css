@@ -27,7 +27,7 @@ body{
 }
 .operators{
   text-align: left;
-  display: inline-block;
+  display: block;
   margin-top:1px;
   margin-bottom: 1px;
   list-style-type: none;
@@ -58,4 +58,12 @@ body{
 .opname{
   font-weight: bold;
   font-family: "Joystix", sans-serif;
+}
+.opheader{
+  text-align: center;
+}
+.opheaderspan{
+  font-family: "Joystix", sans-serif;
+  font-weight: bold;
+  font-size: 1.5em;
 }
