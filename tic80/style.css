@@ -21,7 +21,7 @@ body{
   text-align: left;
   display: center;
   margin-top:1px;
-  margin-bottom: 1px;
+  margin-bottom: 30px;
   list-style-type: none;
   padding:1px;
 }
@@ -67,6 +67,7 @@ body{
 .category{
   background-color: #30346D;
   border-radius: 2px 2px 2px 2px;
+  margin-bottom: 3px;
 }
 .opheaderspan{
   font-family: "Joystix", sans-serif;
