@@ -5,7 +5,7 @@ body{
 
 .container{
   display: inline-block;
-  max-width: 720px;
+  max-width: 650px;
 }
 
 .header{
@@ -75,6 +75,11 @@ body{
   font-size: 1.5em;
   color: #deeed6;
 }
+a{
+  color: black;
+  text-decoration: none;
+}
+
 .tabset{
   position: fixed;
   bottom: 0px;
@@ -95,14 +100,83 @@ body{
   border-radius: 2px 2px 0 0;
   background-color: #30346D;
 }
-a{
-  color: black;
-  text-decoration: none;
-}
-
 .tabcontents{
   color: #deeed6;
   font-family: 'Joystix', sans-serif;
   font-size: 1.5em;
   font-weight: bold;
+}
+
+@media screen and (min-width:760px) {
+  .tabset{
+    position: fixed;
+    bottom: 0px;
+    margin:0;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom:0;
+    left:0;
+    text-align: center;
+    width:3.5em;
+  }
+  .tabs{
+    list-style-type: none;
+    padding: 0px;
+    margin:0px;
+    display: block;
+  }
+  .tab{
+    display: block;
+    padding:5px;
+    background-color: #30346D;
+    border-radius: 0 0 0 0;
+  }
+  .tabcontents{
+    color: #deeed6;
+    font-family: 'Joystix', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .toptab{
+    border-radius: 0 2px 0 0;
+  }
+  .bottomtab{
+    border-radius: 0 0 2px 0;
+  }
+}
+
+@media screen and (min-width:830px) {
+  .tabset{
+    position: fixed;
+    margin:0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-415px, -50%);
+    text-align: center;
+    width:3.5em;
+  }
+  .tabs{
+    list-style-type: none;
+    padding: 0px;
+    margin:0px;
+    display: block;
+  }
+  .tab{
+    display: block;
+    padding:5px;
+    background-color: #30346D;
+    border-radius: 0 0 0 0;
+  }
+  .tabcontents{
+    color: #deeed6;
+    font-family: 'Joystix', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .toptab{
+    border-radius: 2px 2px 0 0;
+  }
+  .bottomtab{
+    border-radius: 0 0 2px 2px;
+  }
 }
